@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Interface</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0F0;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .terminal {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            white-space: pre-wrap;
+            position: relative;
+            text-align: center;
+        }
+
+        .text {
+            font-size: 28px;
+            line-height: 1.5;
+            animation: typing 5s steps(40) infinite, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-right-color: #0F0;
+            }
+            50% {
+                border-right-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="text">
+            WHO IS ASTRA??<br>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            appendText("ASTRA was a supernatural weapon, a sword to kill and destroy the world ...", 50);
+            appendText("Aim to become a blackhat hacker", 50);
+            appendText("Who are you?", 50);
+            appendText("I'M born to BREAK security", 50);
+            appendText("And FUCK systems", 50);
+            appendText("Never mess with us", 50);
+            appendText("YOU WILL BE FUCKED UP!!!", 50);
+        }, 3000); // Delay the text display after 2 seconds
+
+        function appendText(text, speed) {
+            setTimeout(function() {
+                const textElement = document.querySelector(".text");
+                textElement.innerHTML += "<br>" + text;
+            }, speed);
+        }
+    </script>
+</body>
+</html>
